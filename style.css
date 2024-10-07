@@ -1,58 +1,91 @@
 body {
-    background-color: bisque;
-    font-family: Bai Jamjuree;
-}
-
-#container {
-    display: flex; /* Elementos dispostos em linha */
-}
-
-.cartao {
-    margin: 1rem 1rem;
-    background-color: aqua;
-    height: 20rem;
-    flex-grow: 1;
-    flex-basis: calc(33% - 6rem);
-}
-
-.cartao__conteudo {
-    text-align: center;
-    /* background-color: aquamarine; */
-    height: 100%;
-}
-
-.cartao__conteudo h3 {
-    background-color: tomato;
-    text-align: left;
-    padding: 0.5rem;
-    position: absolute;
-    margin: 0.6rem;
-    border-radius: 0.6rem;
-    font-size: 1vw;
-}
-
-.cartao__conteudo p {
-    margin-top: 1rem;
-    padding: 2rem;
-}
-
-
-
-
-
-
-
-footer {
     background-color: black;
-    color: white;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    height: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    align-items: center;
+    height: 100vh;
+
+}
+.container {
+    background-color: blue;
+    height: 220px;
+    width: 400px;
+    border-radius: 8px;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    transition: transform 500ms ease-in-out;
 }
 
-footer p {
-    text-align: center;
-    font-size: 0.6rem;
-    margin-top: 0.5rem;
+.linhas {
+    display: flex;
+    flex-direction: row;
+    gap: 80px;
+    align-items: center;
+    margin-top: 20px;
 }
+
+.materia {  
+    border-radius: 10px;
+    border: solid 2px white;
+    margin-left: 10px;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    margin-top: 8px;
+    backface-visibility: hidden;
+}
+
+.namemateria {
+    padding: 5px;
+    font-weight: bold;
+    color: white;
+    margin: 0;
+    font-size: 18px;
+}
+
+.question {
+display: flex;
+justify-content: center;
+align-items: center;
+margin-top: 10px;
+backface-visibility: hidden;
+width: 100%;
+height: 50%;
+}
+
+
+.pquestion {
+    font-size: 26px;
+    color: white;
+   
+}
+
+.container:hover {
+    transform: rotateY(180deg);
+    
+}
+.container:hover .resposta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} 
+
+.resposta {
+display: flex;
+transform: rotateY(180deg);
+margin-left: -10px;
+margin-top: -110px;
+}
+
+.presposta {
+    color: cyan;
+    font-size: 26px;
+}
+
+.resposta, 
+.question {
+    backface-visibility: hidden;
+
+}
+    
